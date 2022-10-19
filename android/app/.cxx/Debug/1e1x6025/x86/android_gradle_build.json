@@ -1,0 +1,28 @@
+{
+  "buildFiles": [
+    "/Users/phi.tran/Desktop/NewArchitecture/android/app/src/main/jni/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/phi.tran/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/phi.tran/Desktop/NewArchitecture/android/app/.cxx/Debug/1e1x6025/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/phi.tran/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/phi.tran/Desktop/NewArchitecture/android/app/.cxx/Debug/1e1x6025/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {},
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/phi.tran/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/phi.tran/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

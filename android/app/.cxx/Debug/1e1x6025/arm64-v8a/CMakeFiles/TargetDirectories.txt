@@ -1,0 +1,2 @@
+/Users/phi.tran/Desktop/NewArchitecture/android/app/.cxx/Debug/1e1x6025/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/phi.tran/Desktop/NewArchitecture/android/app/.cxx/Debug/1e1x6025/arm64-v8a/CMakeFiles/edit_cache.dir
