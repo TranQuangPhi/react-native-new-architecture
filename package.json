@@ -38,6 +38,11 @@
         "name": "RTNCenteredTextSpecs",
         "type": "components",
         "jsSrcsDir": "js/RTNCenteredText"
+      },
+      {
+        "name": "RTNColoredViewSpec",
+        "type": "components",
+        "jsSrcsDir": "js/RTNColoredView"
       }
     ]
   }

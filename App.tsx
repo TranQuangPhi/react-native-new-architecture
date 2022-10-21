@@ -29,6 +29,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import NativeSampleModule from './js/NativeSampleModule';
 import RTNCenteredText from './js/RTNCenteredText/RTNCenteredTextNativeComponent';
+// import RTNColoredView from './js/RTNColoredView/RTNColoredViewNativeComponent';
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -84,10 +85,13 @@ const App: () => Node = () => {
           <Text>dsad</Text>
         </TouchableOpacity>
       </View>
-      {/* <RTNCenteredText
+
+      <RTNCenteredText
         text="Hello World!"
-        style={{ width: '100%', height: 30 }}
-      /> */}
+        style={{ marginTop: 100, width: '100%', height: 30 }}
+      />
+
+      {/* <RTNColoredView color="#FF0099"/> */}
     </SafeAreaView>
   );
 };

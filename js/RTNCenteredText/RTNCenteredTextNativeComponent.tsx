@@ -4,7 +4,6 @@ import codegenNativeComponent from 'react-native/Libraries/Utilities/codegenNati
 
 export interface NativeProps extends ViewProps {
   text?: string;
-  // add other props here
 }
 
 export default codegenNativeComponent<NativeProps>(

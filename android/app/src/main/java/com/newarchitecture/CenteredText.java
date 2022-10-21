@@ -5,8 +5,11 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.graphics.Color;
 
+import android.view.View;
 import android.widget.TextView;
 import android.view.Gravity;
+
+import org.w3c.dom.Text;
 
 public class CenteredText extends TextView {
 

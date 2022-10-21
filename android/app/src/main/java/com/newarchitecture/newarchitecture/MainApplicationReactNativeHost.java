@@ -26,9 +26,10 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.facebook.react.fabric.ReactNativeConfig;
 import com.newarchitecture.BuildConfig;
 import com.newarchitecture.CenteredTextManager;
+//import com.newarchitecture.ColoredViewManager;
+import com.newarchitecture.newarchitecture.components.CenteredTextRegistry;
 import com.newarchitecture.NativeSampleModuleImpl;
 import com.newarchitecture.newarchitecture.components.MainComponentsRegistry;
 import com.newarchitecture.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
@@ -95,7 +96,8 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
           return moduleInfos;
         };
       }
-    }, new ReactPackage() {
+    });
+    packages.add(new ReactPackage() {
       @NonNull
       @Override
       public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
@@ -108,6 +110,19 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
         return Collections.singletonList(new CenteredTextManager(reactContext));
       }
     });
+//    packages.add(new ReactPackage() {
+//      @NonNull
+//      @Override
+//      public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
+//        return Collections.emptyList();
+//      }
+//
+//      @NonNull
+//      @Override
+//      public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
+//        return Collections.singletonList(new ColoredViewManager(reactContext));
+//      }
+//    });
     return packages;
   }
 
@@ -152,6 +167,7 @@ public class MainApplicationReactNativeHost extends ReactNativeHost {
                 // The one that is generated with the template contains no components
                 // and just provides you the one from React Native core.
                 MainComponentsRegistry.register(componentFactory);
+                CenteredTextRegistry.register(componentFactory);
 
                 final ReactInstanceManager reactInstanceManager = getReactInstanceManager();
 

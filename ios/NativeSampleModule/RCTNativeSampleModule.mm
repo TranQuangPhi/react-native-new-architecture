@@ -11,10 +11,15 @@ RCT_EXPORT_MODULE();
 ////  return message;
 //}
 
-RCT_EXPORT_METHOD(getHelloWorld:(NSString *)name) {
-  RCTLogInfo(@"Hello %@ ", name);
-//  resolve(@[name]);
+- (void)getHelloWorld:(NSString)name resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
+//    NSNumber *result = [[NSNumber alloc] initWithInteger:a+b];
+    resolve(name);
 }
+
+//RCT_EXPORT_METHOD(getHelloWorld:(NSString *)name) {
+//  RCTLogInfo(@"Hello %@ ", name);
+////  resolve(@[name]);
+//}
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:(const facebook::react::ObjCTurboModule::InitParams &)params
 {

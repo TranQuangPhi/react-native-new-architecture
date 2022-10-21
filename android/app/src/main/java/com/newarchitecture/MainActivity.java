@@ -1,5 +1,7 @@
 package com.newarchitecture;
 
+import androidx.annotation.Nullable;
+
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;

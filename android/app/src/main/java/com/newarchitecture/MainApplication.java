@@ -2,15 +2,22 @@ package com.newarchitecture;
 
 import android.app.Application;
 import android.content.Context;
+
+import androidx.annotation.NonNull;
+
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
+import com.facebook.react.bridge.NativeModule;
+import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.config.ReactFeatureFlags;
+import com.facebook.react.uimanager.ViewManager;
 import com.facebook.soloader.SoLoader;
 import com.newarchitecture.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
+import java.util.Collections;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -27,7 +34,19 @@ public class MainApplication extends Application implements ReactApplication {
           @SuppressWarnings("UnnecessaryLocalVariable")
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
-          // packages.add(new MyReactNativePackage());
+           packages.add(new ReactPackage() {
+               @NonNull
+               @Override
+               public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
+                   return Collections.emptyList();
+               }
+
+               @NonNull
+               @Override
+               public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
+                   return Collections.singletonList(new CenteredTextManager(reactContext));
+               }
+           });
           return packages;
         }
 
